@@ -1,0 +1,217 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Consolas;
+    color:#FCFCFC;
+    background-color: #444444;
+    margin: 0px;
+    border: 0px;
+    height: 99.99%;
+    width: 100%;
+}
+
+header {
+    background-color: #333333;
+    height: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-bottom: 0px;
+    border:0;
+    margin: 0;
+    width:100%;
+    position: relative;
+}
+
+.flexbox{
+    display: flex;    
+    align-items: flex-start;
+    flex-direction: row;
+    margin: auto;
+    border: 0px;
+    margin: 0px;
+    height: 65%;
+}
+
+.subtitle{
+    text-align: left;
+    font-weight: 400;
+    font-size: 1.2em;
+    border: 0;
+    margin-left: 15%;
+    height: 6%;
+}
+
+.buttons{
+    margin-left: 15%;
+    margin-right: 5%;
+}
+
+.textbox{
+    margin-left: 5%;
+    margin-right: 15%;
+    padding: 0px;
+    height: 100%;
+    overflow-y: auto;
+    text-align: justify;
+}
+
+.photobox{
+    margin-left: 5%;
+    margin-right: 15%;
+    padding: 0px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.works{
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+    margin: 5px;
+}
+
+.works:active{
+    object-fit: contain ;
+    height: 300px;
+    width: 300px;
+    margin: 5px;
+}
+
+#bio{
+    padding-bottom:5%;
+}
+
+#portfolio{
+    padding-top:5%;
+    padding-bottom:5%;
+}
+
+#curriculum{
+    padding-top:5%;
+    padding-bottom:5%;
+}
+
+#contatti{
+    padding-top:5%;
+}
+
+footer {
+    background-color: #333333;
+    height: 10%;
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-weight: 200;
+    position: fixed;
+    bottom: 0px;
+}
+
+a {
+    margin: 0px;
+    display: block;
+    transition: all 0.3s ease-in-out
+}
+
+a:link {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out
+}
+
+a:visited {
+    color: whitesmoke;
+    transition: all 0.3s ease-in-out
+}
+
+a:hover {
+    color: #E9B000;
+    transition: all 0.15s ease-in-out
+}
+
+.toptitle{
+    margin: 0px;
+    border: 0px;
+    display: inline;
+    font-size: 2.2em;
+    position: absolute;
+    bottom: 0px;
+}
+
+.toptitle:after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 0.05em;
+    width: 100%;
+    background-color: #E9B000;
+    visibility: hidden;
+    transform: scale(0);
+    transition: all 0.15s ease-in-out;
+}
+
+.toptitle:hover:after{
+    visibility: visible;
+    transform: scale(1);
+}
+
+.credits{
+    margin: 0px;
+    border: 0px;
+    display: inline;
+    position: absolute;
+    bottom: 0;
+}
+
+.text{
+    border: 0;
+    margin: 0;
+    padding-left: 5%;
+    vertical-align: text-top;
+    font-size: 1em;
+}
+
+@keyframes glitchy {
+    0%   {transform: translate(-1px, 1px);}
+    25%  {transform: translate(-1px, -1px);}
+    50%  {transform: translate(1px, 1px);}
+    75%  {transform: translate(1px, -1px);}
+    100%  {transform: translate(-1px, 1px);}
+}
+
+#glitch {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    z-index: 1;
+}
+
+#glitch:before, #glitch:after {
+        content: 'report';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    
+#glitch:before {
+        color: #00ffff;
+        z-index: -1;
+    }
+
+#glitch:after {
+        color: #ff00ff;
+        z-index: -2;
+    }
+    
+#glitch:hover:before {
+            animation: glitchy 0.3s ease 0.3s infinite;
+        }
+        
+#glitch:hover:after {
+            animation: glitchy 0.3s ease infinite reverse;
+        }

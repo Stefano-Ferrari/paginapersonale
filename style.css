@@ -1,0 +1,71 @@
+*{
+    border: 0;
+    margin: 0;
+}
+
+#container1{
+    display: flex;    
+    align-items: flex-start;
+    flex-direction: column;
+    margin: auto;
+}
+
+#container2{
+    display: flex;    
+    align-items: flex-start;
+    flex-direction: row;
+    margin: auto;
+}
+
+#header{
+    padding-top: 5vh; padding-bottom: 5vh;
+    padding-left: 5vw; padding-right: 5vw;
+    background-color: grey;
+    width: 100%;
+    height: 10vh;
+    top:0;
+    left:0;
+    position: sticky;
+}
+
+#sidebar{
+    padding-left: 5vw;
+    background-color: burlywood;
+    position: fixed;
+    margin-left: 0;
+    
+    left: 0;
+    width: 15vw;
+    
+}
+
+.menu{
+    padding: 1vh;
+    padding-left: 0;
+    padding-right: 1vw;
+    
+}
+
+#main{
+    margin-left: 20vw;
+    
+    background-color: cornflowerblue;
+}
+
+.textbox{
+    padding: 1vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+#home{
+    height: 90vh;
+}
+
+#bio{
+    height: 90vh;
+}
+
+#portfolio{
+    height: 90vh;
+}
