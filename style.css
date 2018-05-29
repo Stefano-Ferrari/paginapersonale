@@ -2,22 +2,28 @@
     border: 0;
     margin: 0;
     box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h3{
+    font-size: 2em;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
 
-#container1{
+.containerCol{
     display: flex;    
     align-items: flex-start;
     flex-direction: column;
     margin: auto;
 }
 
-#container2{
+.containerRow{
     display: flex;    
     align-items: flex-start;
     flex-direction: row;
     margin: auto;
+    flex-wrap: wrap;
 }
 
 body{
@@ -53,6 +59,7 @@ body{
     padding-left: 0;
     padding-right: 1vw;
     padding-top: 2vh;
+    position: relative;
 }
 
 .menulink{
@@ -60,20 +67,86 @@ body{
     color: white;
 }
 
+.menulink:hover{
+    font-size: 1.3em;
+    font-family: Montserrat Bold, sans-serif;
+}
+
 #main{
     margin-left: 20vw;
 }
 
 .section{
-    height: 85vh;
+    height: 90vh;
     padding-left: 5vw;
     padding-right: 5vw;
     padding-top: 2vh;
+    position: relative;
+    z-index: -1;
+    overflow-x: hidden;
+    text-align: justify;
 }
 
 .anchor{
     display: block;
-    height: 15vh;
-    margin-top: -15vh;
+    height: 10vh;
+    margin-top: -10vh;
     visibility: hidden;
+}
+
+.textcontainer{
+    position: absolute;
+    top: 60vh;
+    padding-right: 5vw;
+    width:73vw;
+    
+}
+
+.fotohome{
+    position: absolute;
+    left: 38vw;
+    max-width: 500px;
+    width: 40vw;
+    max-height: 500px;
+    height: 40vw;
+    border:0;
+    margin:0;
+    padding: 0;
+    margin-top: 20vh;
+    transform: translate(-50%, -50%)
+}
+
+.glitch{
+    animation: flash 2s infinite linear;
+}
+
+@keyframes flash{
+    0%{opacity: 1}
+    
+    10%{opacity: 1}
+    
+    11%{opacity: 0}
+    
+    12%{opacity: 1}
+    
+    15%{opacity: 1}
+    
+    17%{opacity: 0}
+    
+    19%{opacity: 1}
+    
+    40%{opacity: 1}
+    
+    41%{opacity: 0}
+    
+    42%{opacity: 1}
+    
+    60%{opacity: 1}
+    
+    61%{opacity: 0}
+    
+    63%{opacity: 1}
+    
+    100%{opacity: 1}
+
 }
