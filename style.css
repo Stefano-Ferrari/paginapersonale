@@ -130,10 +130,11 @@ body{
 
 #fotocontainer{
     position: relative;
-    max-width: 400px;
-    width: 30vw;
-    max-height: 400px;
-    height: 30vw;
+    overflow: hidden;
+    max-width: 450px;
+    width: 35vw;
+    max-height: 450px;
+    height: 35vw;
 }
 
 .fotohome{

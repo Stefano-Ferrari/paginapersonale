@@ -1,5 +1,6 @@
 //Scroll
-
+// https://stackoverflow.com/questions/9979827/change-active-menu-item-on-page-scroll
+// http://jsfiddle.net/mekwall/up4nu/
 // Cache selectors
 var lastId,
     topMenu = $("#sidebar"),
@@ -27,8 +28,10 @@ menuItems.click(function(e){
 // Bind to scroll
 $(window).scroll(function(){
    // Get container scroll position
-   var fromTop = $(this).scrollTop();
-   
+    var fromTop = $(this).scrollTop();
+   for(x=0; x<scrollItems.length; x++){
+       
+   }
    // Get id of current scroll item
    var cur = scrollItems.map(function(){
      if ($(this).offset().top < fromTop)
@@ -44,15 +47,19 @@ $(window).scroll(function(){
        menuItems
          .removeClass("active")
          .end().filter("[href='#"+id+"']").addClass("active");
-   }                   
+   }
+    
 });
 
 
 
 
-//parallax
+//parallax 
+// http://www.shinyface.com/2010/09/04/simple-parallax-with-jquery/
+// https://greensock.com/forums/topic/17320-background-parallax-effect-on-mouse-move/
 jQuery(document).ready(function($){
 	$("#fotocontainer").mousemove(
+        
 		function(e){
 			/* Work out mouse position */
 			var offset = $(this).offset();
@@ -62,7 +69,7 @@ jQuery(document).ready(function($){
 			/* Get percentage positions */
 			var mouseXPercent = Math.round(xPos / $(this).width() * 100);
 			var mouseYPercent = Math.round(yPos / $(this).height() * 100);
-
+            
 			/* Position Each Layer */
 			$(this).children("fotohome").each(
 				function(){
@@ -71,10 +78,10 @@ jQuery(document).ready(function($){
 
 					var myX = diffX * (mouseXPercent / 100); //) / 100) / 2;
 
-
+                    
 					var myY = diffY * (mouseYPercent / 100);
                     
-                    alert("prova");
+                    
 
 					var cssObj = {
 						'left': myX + 'px',
