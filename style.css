@@ -2,7 +2,6 @@
     border: 0;
     margin: 0;
     box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 h3{
@@ -28,8 +27,8 @@ h3{
 
 body{
     background: linear-gradient(to bottom, #0F2027, #203A43, #2C5364, #006A85);
-    color: white;
-    font-family: Open Sans, sans-serif;
+    color: whitesmoke;
+    font-family: Open Sans light, sans-serif;
 }
 
 #header{
@@ -46,31 +45,58 @@ body{
 
 #sidebar{
     padding-left: 5vw;
+    padding-top: 5vh;
     position: fixed;
     margin-left: 0;
     left: 0;
     width: 20vw;
-    font-family: Montserrat, sans-serif;
+    height: 50vh;
+    font-family: Montserrat light, sans-serif;
     font-size: 1.2em;
 }
 
 .menu{
-    padding: 1vh;
-    padding-left: 0;
-    padding-right: 1vw;
-    padding-top: 2vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    height: 5vh;
+    width: 15vw;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: Montserrat light, sans-serif;
+    display: block;
     position: relative;
 }
 
-.menulink{
-    text-decoration: none;
-    color: white;
+.menu:hover, .menu:focus, .menu.active{
+    font-family: Montserrat, sans-serif;
+    font-size: 1.1em;
 }
 
-.menulink:hover{
-    font-size: 1.3em;
-    font-family: Montserrat Bold, sans-serif;
+.menu:after{
+    content: '';
+    background-color: whitesmoke;
+    border-bottom: solid 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    opacity: 0;
+    transform: scaleX(0.1);
+    transform-origin: left;
+    transition: all 0.3s;
 }
+
+.menu:hover:after, .menu.active:after{
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: all 0.3s;
+    
+}
+
 
 #main{
     margin-left: 20vw;
@@ -100,6 +126,14 @@ body{
     padding-right: 5vw;
     width:73vw;
     
+}
+
+#fotocontainer{
+    position: relative;
+    max-width: 400px;
+    width: 30vw;
+    max-height: 400px;
+    height: 30vw;
 }
 
 .fotohome{
@@ -149,4 +183,12 @@ body{
     
     100%{opacity: 1}
 
+}
+
+#home{
+    top:10vh;
+}
+
+#bio{
+    top: 100vh;
 }

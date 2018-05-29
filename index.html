@@ -2,7 +2,7 @@
     
     <head>
         <link href="style.css" rel="stylesheet">
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <style>
             @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
         </style>
@@ -14,18 +14,18 @@
         
         <div class="containerRow">
             <div id="sidebar">
-                <div class="menu"><a href="#home" class="menulink">Home</a></div>
-                <div class="menu"><a href="#bio" class="menulink">Bio</a></div>
-                <div class="menu"><a href="#portfolio" class="menulink">Portfolio</a></div>
-                <div class="menu"><a href="#temp" class="menulink">"Showroom"</a></div>
-                <div class="menu"><a href="#contatti" class="menulink">Contatti</a></div>
+                <a href="#home" class="menu active">Home</a>
+                <a href="#bio" class="menu">Bio</a>
+                    <a href="#portfolio" class="menu">Portfolio</a>
+                    <a href="#showcase" class="menu">Showcase</a>
+                    <a href="#contatti" class="menu">Contatti</a>
             </div>
             
             <div id="main">
                 <span class="anchor" id="home"></span>
                 <div class="section">
                     <div class="containerRow2">
-                        <div class="fotocontainer">
+                        <div id="fotocontainer">
                             <img class="fotohome" src="Me/img1.png">
                             <img class="fotohome" src="Me/img2.png">
                             <img class="fotohome" src="Me/img3.png">
@@ -33,14 +33,13 @@
                             <img class="fotohome glitch" src="Me/img5.png">
                         </div>
                         
-                        <div class="textcontainer"><h3>Ciao,</h3> <p>sono Stefano Ferrari, studio Design della Comunicazione al Politecnico di Milano.</p> <p>Mi piace girare video e scattare foto, ho una grande passione per i videogiochi, il web e l'informatica.</p><br>Se vuoi saperne di più su di me scorri la pagina!
+                        <div class="textcontainer"><h3>Ciao,</h3> <p>sono Stefano Ferrari, studio Design della Comunicazione al Politecnico di Milano. Mi piace girare video e scattare foto, ho una grande passione per i videogiochi, il web e l'informatica.</p><br>Se vuoi saperne di più su di me scorri la pagina!
                         </div>
                         
                     </div>
                 </div>
                 <span class="anchor" id="bio"></span>
                 <div class="section">
-                    
                     Ho 20 anni, vivo a Cremona e studio Design della Comunicazione al Politecnico di Milano.<br><br>
                     Sono un appassionato di videogiochi e informatica. Ho iniziato a pensare ad un futuro nel mondo della grafica e della programmazione grazie uno stage, organizzato dal Politecnico, durante il quale ho imparato le basi del linguaggio C# e Unity 3D.<br><br>
                     Per questo motivo, dopo il diploma ho frequentato un anno di Ingegneria Informatica, ma alla fine ho capito che non faceva per me e ho effettuato il passaggio a Design.<br><br>
@@ -52,7 +51,7 @@
                     prova
                 </div>
                 
-                <span class="anchor" id="temp"></span>
+                <span class="anchor" id="showcase"></span>
                 <div class="section">
                     prova
                 </div>
@@ -68,5 +67,7 @@
         <div id="footer"></div>
         </div>
     </body>
+    
+    <script src="script.js"></script>
     
 </html>
