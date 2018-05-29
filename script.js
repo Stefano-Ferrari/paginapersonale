@@ -1,3 +1,5 @@
+//Scroll
+
 // Cache selectors
 var lastId,
     topMenu = $("#sidebar"),
@@ -48,8 +50,42 @@ $(window).scroll(function(){
 
 
 
+//parallax
+jQuery(document).ready(function($){
+	$("#fotocontainer").mousemove(
+		function(e){
+			/* Work out mouse position */
+			var offset = $(this).offset();
+			var xPos = e.pageX - offset.left;
+			var yPos = e.pageY - offset.top;
 
-jQuery(document).ready(function(){
-	$("#fotocontainer").mousemove(alert("prova"));
+			/* Get percentage positions */
+			var mouseXPercent = Math.round(xPos / $(this).width() * 100);
+			var mouseYPercent = Math.round(yPos / $(this).height() * 100);
 
+			/* Position Each Layer */
+			$(this).children("fotohome").each(
+				function(){
+					var diffX = $("#fotocontainer").width() - $(this).width();
+					var diffY = $("#fotocontainer").height() - $(this).height();
+
+					var myX = diffX * (mouseXPercent / 100); //) / 100) / 2;
+
+
+					var myY = diffY * (mouseYPercent / 100);
+                    
+                    alert("prova");
+
+					var cssObj = {
+						'left': myX + 'px',
+						'top': myY + 'px'
+					}
+					//$(this).css(cssObj);
+					$(this).animate({left: myX, top: myY},{duration: 50, queue: false, easing: 'linear'});
+
+				}
+			);
+
+		}
+	);
 });
