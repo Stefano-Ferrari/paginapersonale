@@ -28,7 +28,7 @@ h3{
 body{
     background: linear-gradient(to bottom, #0F2027, #203A43, #2C5364, #006A85);
     color: whitesmoke;
-    font-family: Open Sans light, sans-serif;
+    font-family: Open Sans, sans-serif;
 }
 
 #header{
@@ -51,7 +51,7 @@ body{
     left: 0;
     width: 20vw;
     height: 50vh;
-    font-family: Montserrat light, sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 1.2em;
 }
 
@@ -65,7 +65,7 @@ body{
     color: white;
     text-decoration: none;
     font-size: 1em;
-    font-family: Montserrat light, sans-serif;
+    font-family: Montserrat, sans-serif;
     display: block;
     position: relative;
 }
@@ -73,6 +73,7 @@ body{
 .menu:hover, .menu:focus, .menu.active{
     font-family: Montserrat, sans-serif;
     font-size: 1.1em;
+    /*text-align: right;*/
 }
 
 .menu:after{
@@ -130,11 +131,10 @@ body{
 
 #fotocontainer{
     position: relative;
-    overflow: hidden;
-    max-width: 450px;
-    width: 35vw;
-    max-height: 450px;
-    height: 35vw;
+    height: 50vh;
+    width: 50vh;
+    max-height: 600px;
+    max-width: 600px;
 }
 
 .fotohome{

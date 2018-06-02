@@ -11,7 +11,7 @@ var lastId,
       var item = $($(this).attr("href"));
       if (item.length) { return item; }
     });
-
+    
 // Bind click handler to menu items
 // so we can get a fancy scroll animation
 menuItems.click(function(e){
@@ -23,18 +23,14 @@ menuItems.click(function(e){
   e.preventDefault();
 });
 
-
-
 // Bind to scroll
 $(window).scroll(function(){
    // Get container scroll position
     var fromTop = $(this).scrollTop();
-   for(x=0; x<scrollItems.length; x++){
-       
-   }
+   
    // Get id of current scroll item
    var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
+     if ($(this).offset().top-10 < fromTop)
        return this;
    });
    // Get the id of the current element
@@ -46,7 +42,7 @@ $(window).scroll(function(){
        // Set/remove active class
        menuItems
          .removeClass("active")
-         .end().filter("[href='#"+id+"']").addClass("active");
+         $("[href='#"+id+"']").addClass("active")
    }
     
 });
