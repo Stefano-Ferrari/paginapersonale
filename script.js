@@ -30,7 +30,7 @@ $(window).scroll(function(){
    
    // Get id of current scroll item
    var cur = scrollItems.map(function(){
-     if ($(this).offset().top-10 < fromTop)
+     if ($(this).offset().top-100< fromTop)
        return this;
    });
    // Get the id of the current element
@@ -40,16 +40,15 @@ $(window).scroll(function(){
    if (lastId !== id) {
        lastId = id;
        // Set/remove active class
-       menuItems
-         .removeClass("active")
-         $("[href='#"+id+"']").addClass("active")
+       menuItems.removeClass("active");
+         $("[href='#"+id+"']").addClass("active");
    }
     
 });
 
 
 
-
+/*
 //parallax 
 // http://www.shinyface.com/2010/09/04/simple-parallax-with-jquery/
 // https://greensock.com/forums/topic/17320-background-parallax-effect-on-mouse-move/
@@ -57,16 +56,16 @@ jQuery(document).ready(function($){
 	$("#fotocontainer").mousemove(
         
 		function(e){
-			/* Work out mouse position */
+			// Work out mouse position
 			var offset = $(this).offset();
 			var xPos = e.pageX - offset.left;
 			var yPos = e.pageY - offset.top;
 
-			/* Get percentage positions */
+			// Get percentage positions
 			var mouseXPercent = Math.round(xPos / $(this).width() * 100);
 			var mouseYPercent = Math.round(yPos / $(this).height() * 100);
             
-			/* Position Each Layer */
+			// Position Each Layer
 			$(this).children("fotohome").each(
 				function(){
 					var diffX = $("#fotocontainer").width() - $(this).width();
@@ -92,3 +91,69 @@ jQuery(document).ready(function($){
 		}
 	);
 });
+
+*/
+$(document).ready(function() {
+//Slideshow
+var n = 1;
+var max = 3;
+/*
+do{
+var item = $("#slideshow").find('#item'+n);
+	i++;
+	
+if(item){
+	console.log(item);
+	slideItems.push(item);
+	n++;
+	max = (n-1);
+}
+}while(i<3);
+
+n=0;
+*/
+
+function next(){
+	
+	$('#item'+n).removeClass("activeitem");
+	if(n!=max){
+		if(n!=(max-1)){
+			$('#item'+(n-1)).removeClass("previtem");
+			$('#item'+n).addClass("previtem");
+						
+			$('#item'+(n+1)).removeClass("nextitem");
+			$('#item'+(n+1)).addClass("activeitem");
+			
+			$('#item'+(n+2)).addClass("nextitem");
+		} else{
+			$('#item'+(n-1)).removeClass("previtem");
+			
+			$('#item'+n).addClass("previtem");
+						
+			$('#item'+(n+1)).removeClass("nextitem");
+			$('#item'+(n+1)).addClass("activeitem");
+			
+			$('#item1').addClass("nextitem");
+		}
+	}
+	else{
+		$('#item'+(n-1)).removeClass("previtem");
+		
+		$('#item'+n).addClass("previtem");
+			
+			$('#item1').removeClass("nextitem");
+			$('#item1').addClass("activeitem");
+			
+			$('#item2').addClass("nextitem");
+	}
+	if(n==max){
+	n=1;
+	}
+	else{
+		n++;
+	}
+}
+
+$("#next").on("click", next);
+	
+	});

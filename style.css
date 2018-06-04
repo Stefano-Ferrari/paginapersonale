@@ -6,9 +6,10 @@
 
 h3{
     font-size: 2em;
+	font-weight: 400;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro');
 
 .containerCol{
     display: flex;    
@@ -26,37 +27,48 @@ h3{
 }
 
 body{
-    background: linear-gradient(to bottom, #0F2027, #203A43, #2C5364, #006A85);
+    /*background: linear-gradient(to bottom, #0F2027, #203A43, #2C5364, #006A85);*/
+    background: linear-gradient(to bottom, #1a3543, #708085);
     color: whitesmoke;
-    font-family: Open Sans, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
 }
 
 #header{
-    padding-top: 3vh;
-    padding-left: 5vw; padding-right: 5vw;
-    width: 100%;
+    padding-top: 2.5vh;
+    padding-left: 3vw; padding-right: 3vw;
+    width: 89%;
     height: 10vh;
-    top:0;
+    left: 5vw;
+    top:1vh;
     background-color: #006A85;
     position: sticky;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.8em;
+	font-weight: 400;
+	border-radius: 15px;
+	box-shadow: 4px 4px 12px #123;
+	z-index: 1;
 }
 
 #sidebar{
-    padding-left: 5vw;
-    padding-top: 5vh;
+    padding-left: 3vw;
     position: fixed;
-    margin-left: 0;
-    left: 0;
-    width: 20vw;
+    top: 16vh;
+    left: 5vw;
+    width: 18vw;
     height: 50vh;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
+    background-color: #006A85;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	box-shadow: 4px 4px 12px #123;
+	z-index: 1;
 }
 
 .menu{
-    margin-top: 2vh;
+    margin-top: 4vh;
     margin-bottom: 2vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
@@ -65,13 +77,13 @@ body{
     color: white;
     text-decoration: none;
     font-size: 1em;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     display: block;
     position: relative;
 }
 
 .menu:hover, .menu:focus, .menu.active{
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.1em;
     /*text-align: right;*/
 }
@@ -105,13 +117,12 @@ body{
 
 .section{
     height: 90vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    padding-top: 2vh;
+    padding: 5vh;
     position: relative;
-    z-index: -1;
     overflow-x: hidden;
     text-align: justify;
+	width: 67vw;
+	overflow: visible;
 }
 
 .anchor{
@@ -122,11 +133,14 @@ body{
 }
 
 .textcontainer{
-    position: absolute;
     top: 60vh;
-    padding-right: 5vw;
-    width:73vw;
-    
+	padding: 5vh;
+	margin-left:-5vh;
+    width: 67vw;
+	background-color: rgb(7,7,7,0.4);
+    border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+	box-shadow: 3px 3px 12px #123;
 }
 
 #fotocontainer{
@@ -140,10 +154,10 @@ body{
 .fotohome{
     position: absolute;
     left: 38vw;
-    max-width: 500px;
-    width: 40vw;
-    max-height: 500px;
-    height: 40vw;
+    max-width: 450px;
+    width: 50vw;
+    max-height: 450px;
+    height: 50vw;
     border:0;
     margin:0;
     padding: 0;
@@ -186,10 +200,109 @@ body{
 
 }
 
-#home{
-    top:10vh;
+.img{
+	display: inline;
+	height: 15vw;
+	width: 15vw;
+	max-height: 40vh;
 }
 
-#bio{
-    top: 100vh;
+.text{
+	display: inline;
+	width: 40vw;
+	position: absolute;
+	right: 0;
+	background-color: rgb(7,7,7,0.4);
+    border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+	box-shadow: 2px 2px 12px #123;
+	padding: 5vh;
+}
+
+.img2{
+	display: inline;
+	height: 15vw;
+	width: 15vw;
+	max-height: 40vh;
+	position: absolute;
+	right: 5vh;
+}
+
+.text2{
+	display: inline;
+	width: 40vw;
+	position: absolute;
+	left: 0;;
+	background-color: rgb(7,7,7,0.4);
+	box-shadow: 2px 2px 12px #123;
+	padding: 5vh;
+}
+
+.textimg{
+	display: block;
+	margin-bottom: 5vh;
+}
+
+#slideshow{
+	position: relative;
+	background-color: beige;
+	height: 66.6%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.slidebtn{
+	background-color: aqua;
+	position: absolute;
+	width: 5vh;
+	height: 5vh;
+	border-radius: 50%;
+	top: 50%;
+	transform: translate(0, -50%);
+	z-index: 1;
+}
+
+#prev{
+	left: 1vw;
+}
+
+#next{
+	right: 1vw;
+}
+
+.slideitem{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 0;
+}
+
+#item1{
+	background-color: red;
+}
+
+#item2{
+	background-color: blue;
+}
+
+#item3{
+	background-color: green;
+}
+
+.activeitem{
+	visibility: visible;
+	left: 0;
+	transition: all 1s ease;
+}
+
+.previtem{
+	visibility: hidden;
+	left:-100%;
+	transition: all 1s ease;
+}
+
+.nextitem{
+	visibility: hidden;
+	left:100%;
+	transition: all 1s ease;
 }
