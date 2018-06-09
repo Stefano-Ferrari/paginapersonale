@@ -243,10 +243,10 @@ body{
 	margin-bottom: 5vh;
 }
 
-#slideshow{
-	position: relative;
+.slideshow{
+	position: absolute;
 	background-color: beige;
-	height: 66.6%;
+	height: 100%;
 	width: 100%;
 	overflow: hidden;
 }
@@ -262,12 +262,14 @@ body{
 	z-index: 1;
 }
 
-#prev{
+.prev{
 	left: 1vw;
+    cursor: pointer;
 }
 
-#next{
+.next{
 	right: 1vw;
+    cursor: pointer;
 }
 
 .slideitem{
@@ -277,22 +279,31 @@ body{
 	z-index: 0;
 }
 
-#item1{
+.item1{
 	background-color: red;
 }
 
-#item2{
+.item2{
 	background-color: blue;
 }
 
-#item3{
+.item3{
 	background-color: green;
+}
+
+.item4{
+    background-color: yellow;
 }
 
 .activeitem{
 	visibility: visible;
 	left: 0;
 	transition: all 1s ease;
+}
+
+.hiddenitem{
+    visibility: hidden;
+	left:100%;
 }
 
 .previtem{
@@ -305,4 +316,47 @@ body{
 	visibility: hidden;
 	left:100%;
 	transition: all 1s ease;
+}
+
+.button-container{
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.select-button{
+    cursor: pointer;
+    position: absolute;
+    padding: 15px;
+    height: 50px;
+    width: 100px;
+    background-color: grey;    
+}
+
+#photo{
+    left:0;
+}
+
+#other{
+    right: 0;
+}
+
+#sketch{
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.slide-active{
+    visibility: visible;
+    z-index: 0;
+}
+
+.slide-hidden{
+    visibility: hidden;
+    z-index: -1;
+}
+
+.slide-container{
+    position: relative;
+    height: 66.6%;
 }

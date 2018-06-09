@@ -96,55 +96,56 @@ jQuery(document).ready(function($){
 $(document).ready(function() {
 //Slideshow
 var n = 1;
-var max = 3;
-/*
-do{
-var item = $("#slideshow").find('#item'+n);
-	i++;
-	
-if(item){
-	console.log(item);
-	slideItems.push(item);
-	n++;
-	max = (n-1);
-}
-}while(i<3);
+var s = 1;
+var i = 1;
+var max = 4;
 
-n=0;
-*/
-
-function next(){
-	
-	$('#item'+n).removeClass("activeitem");
+function next(){	$('.item'+n).removeClass("activeitem");
 	if(n!=max){
 		if(n!=(max-1)){
-			$('#item'+(n-1)).removeClass("previtem");
-			$('#item'+n).addClass("previtem");
+            if(n==1){
+			$('.item'+(max)).removeClass("previtem");
+			$('.item'+n).addClass("previtem");
+            $('.item'+(max)).addClass("hiddenitem");
 						
-			$('#item'+(n+1)).removeClass("nextitem");
-			$('#item'+(n+1)).addClass("activeitem");
+			$('.item'+(n+1)).removeClass("nextitem");
+			$('.item'+(n+1)).addClass("activeitem");
 			
-			$('#item'+(n+2)).addClass("nextitem");
+            $('.item'+(n+2)).removeClass("hiddenitem");
+			$('.item'+(n+2)).addClass("nextitem");
+            }else{
+            $('.item'+(n-1)).removeClass("previtem");
+			$('.item'+n).addClass("previtem");
+            $('.item'+(n-1)).addClass("hiddenitem");
+            
+			$('.item'+(n+1)).removeClass("nextitem");
+			$('.item'+(n+1)).addClass("activeitem");
+			
+            $('.item'+(n+2)).removeClass("hiddenitem");
+			$('.item'+(n+2)).addClass("nextitem");
+            }
 		} else{
-			$('#item'+(n-1)).removeClass("previtem");
-			
-			$('#item'+n).addClass("previtem");
+			$('.item'+(n-1)).removeClass("previtem");
+			$('.item'+n).addClass("previtem");
+            $('.item'+(n-1)).addClass("hiddenitem");
 						
-			$('#item'+(n+1)).removeClass("nextitem");
-			$('#item'+(n+1)).addClass("activeitem");
+			$('.item'+(n+1)).removeClass("nextitem");
+			$('.item'+(n+1)).addClass("activeitem");
 			
-			$('#item1').addClass("nextitem");
+            $('.item1').removeClass("hiddenitem");
+			$('.item1').addClass("nextitem");
 		}
 	}
 	else{
-		$('#item'+(n-1)).removeClass("previtem");
-		
-		$('#item'+n).addClass("previtem");
+		$('.item'+(n-1)).removeClass("previtem");
+		$('.item'+n).addClass("previtem");
+        $('.item'+(n-1)).addClass("hiddenitem");
 			
-			$('#item1').removeClass("nextitem");
-			$('#item1').addClass("activeitem");
+        $('.item1').removeClass("nextitem");
+        $('.item1').addClass("activeitem");
 			
-			$('#item2').addClass("nextitem");
+        $('.item2').removeClass("hiddenitem");
+        $('.item2').addClass("nextitem");
 	}
 	if(n==max){
 	n=1;
@@ -154,6 +155,203 @@ function next(){
 	}
 }
 
-$("#next").on("click", next);
+function prev(){	$('.item'+n).removeClass("activeitem");
+	if(n!=1){
+		if(n!=(2)){
+            if(n==max){
+            $('.item'+(max-1)).removeClass("previtem");
+			$('.item'+(max-1)).addClass("activeitem");
+            
+			$('.item'+(n-2)).removeClass("hiddenitem");
+			$('.item'+(n-2)).addClass("previtem");
+                
+			$('.item1').removeClass("nextitem");
+            $('.item'+(max)).addClass("nextitem");
+            $('.item1').addClass("hiddenitem");
+            }else{
+            $('.item'+(n-1)).removeClass("previtem");
+			$('.item'+(n-1)).addClass("activeitem");
+            
+			$('.item'+(n-2)).removeClass("hiddenitem");
+			$('.item'+(n-2)).addClass("previtem");
+                
+			$('.item'+(n+1)).removeClass("nextitem");
+            $('.item'+(n)).addClass("nextitem");
+            $('.item'+(n+1)).addClass("hiddenitem");
+            }
+		} else{
+			$('.item'+(n-1)).removeClass("previtem");
+			$('.item'+(n-1)).addClass("activeitem");
+            
+			$('.item'+(max)).removeClass("hiddenitem");
+			$('.item'+(max)).addClass("previtem");
+                
+			$('.item'+(n+1)).removeClass("nextitem");
+            $('.item'+(n)).addClass("nextitem");
+            $('.item'+(n+1)).addClass("hiddenitem");
+		}
+	}
+	else{
+		$('.item'+(max)).removeClass("previtem");
+			$('.item'+(max)).addClass("activeitem");
+            
+			$('.item'+(max-1)).removeClass("hiddenitem");
+			$('.item'+(max-1)).addClass("previtem");
+                
+			$('.item'+(n+1)).removeClass("nextitem");
+            $('.item'+(n)).addClass("nextitem");
+            $('.item'+(n+1)).addClass("hiddenitem");
+	}
+	if(n==1){
+	n=max;
+	}
+	else{
+		n--;
+	}
+}
+    
+function switchPhoto(){
+    
+    if(s==1){
+        return null;
+    };
+    
+    if(s==2){
+    $("#slide-sketch").removeClass("slide-active");
+    $("#slide-sketch").addClass("slide-hidden");
+    $("#slide-photo").removeClass("slide-hidden");
+    $("#slide-photo").addClass("slide-active");
+    }
+    
+    if(s==3){
+    $("#slide-other").removeClass("slide-active");
+    $("#slide-other").addClass("slide-hidden");
+    $("#slide-photo").removeClass("slide-hidden");
+    $("#slide-photo").addClass("slide-active");
+    }
+    
+    s=1;
+    
+    if(n==1){
+        $('.item'+max).removeClass("previtem");
+    }else{
+        $('.item'+(n-1)).removeClass("previtem");
+    }
+    $('.item'+n).removeClass("activeitem");
+    if(n==max){
+        $('.item1').removeClass("nextitem");
+    }else{
+	   $('.item'+(n+1)).removeClass("nextitem");
+    }
+    for(i=3; i<max; i++){
+        $('.item'+i).addClass("hiddenitem");
+    }
+    $('.item1').removeClass("hiddenitem");
+	$('.item1').addClass("activeitem");	
+    $('.item'+(max)).removeClass("hiddenitem");
+    $('.item'+(max)).addClass("previtem");
+    $('.item2').removeClass("hiddenitem");
+	$('.item2').addClass("nextitem");
+    n=1;
+}
+    
+function switchSketch(){
+    
+    if(s==2){
+        return null;
+    };
+    
+    if(s==1){
+    $("#slide-photo").removeClass("slide-active");
+    $("#slide-photo").addClass("slide-hidden");
+    $("#slide-sketch").removeClass("slide-hidden");
+        $("#slide-sketch").addClass("slide-active");
+    }
+    
+    if(s==3){
+    $("#slide-other").removeClass("slide-active");
+    $("#slide-sketch").removeClass("slide-hidden");
+    $("#slide-other").addClass("slide-hidden");
+    $("#slide-sketch").addClass("slide-active");
+    }
+
+    s=2;
+    
+    if(n==1){
+        $('.item'+max).removeClass("previtem");
+    }else{
+        $('.item'+(n-1)).removeClass("previtem");
+    }
+    $('.item'+n).removeClass("activeitem");
+    if(n==max){
+        $('.item1').removeClass("nextitem");
+    }else{
+	   $('.item'+(n+1)).removeClass("nextitem");
+    }
+    for(i=3; i<max; i++){
+        $('.item'+i).addClass("hiddenitem");
+    }
+    $('.item1').removeClass("hiddenitem");
+	$('.item1').addClass("activeitem");	
+    $('.item'+(max)).removeClass("hiddenitem");
+    $('.item'+(max)).addClass("previtem");
+    $('.item2').removeClass("hiddenitem");
+	$('.item2').addClass("nextitem");
+    n=1;
+}
+
+function switchOther(){
+    
+    
+    if(s==3){
+        return null;
+    };
+    
+    if(s==1){
+    $("#slide-sketch").removeClass("slide-active");
+    $("#slide-sketch").addClass("slide-hidden");
+    $("#slide-other").removeClass("slide-hidden");
+    $("#slide-other").addClass("slide-active");
+    }
+    
+    if(s==2){
+    $("#slide-sketch").removeClass("slide-active");
+    $("#slide-sketch").addClass("slide-hidden");
+    $("#slide-other").removeClass("slide-hidden");
+    $("#slide-other").addClass("slide-active");
+    }
+    
+    s=3;
+    
+    if(n==1){
+        $('.item'+max).removeClass("previtem");
+    }else{
+        $('.item'+(n-1)).removeClass("previtem");
+    }
+    $('.item'+n).removeClass("activeitem");
+    if(n==max){
+        $('.item1').removeClass("nextitem");
+    }else{
+	   $('.item'+(n+1)).removeClass("nextitem");
+    }
+    for(i=3; i<max; i++){
+        $('.item'+i).addClass("hiddenitem");
+    }
+    $('.item1').removeClass("hiddenitem");
+	$('.item1').addClass("activeitem");	
+    $('.item'+(max)).removeClass("hiddenitem");
+    $('.item'+(max)).addClass("previtem");
+    $('.item2').removeClass("hiddenitem");
+	$('.item2').addClass("nextitem");
+    n=1;
+}
+    
+    
+$(".next").on("click", next);
+$(".prev").on("click", prev);
+
+$("#photo").on("click", switchPhoto);
+$("#sketch").on("click", switchSketch);
+$("#other").on("click", switchOther);
 	
 	});
