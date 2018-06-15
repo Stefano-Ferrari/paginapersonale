@@ -1,7 +1,9 @@
 <html>
     
     <head>
+		
         <link href="style.css" rel="stylesheet">
+		
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <style>
             @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
@@ -10,12 +12,12 @@
     
     <body>
         <div class="containerCol">
-        <div id="header">Stefano Ferrari</div>
         
         <div class="containerRow">
             <div id="sidebar">
+				<h1>Stefano Ferrari</h1>
                 <a href="#home" class="menu active">Home</a>
-                <a href="#bio" class="menu">About</a>
+                <a href="#about" class="menu">About</a>
                     <a href="#portfolio" class="menu">Portfolio</a>
                     <a href="#showcase" class="menu">Showcase</a>
                     <a href="#contatti" class="menu">Contatti</a>
@@ -24,88 +26,142 @@
             <div id="main">
                 <span class="anchor" id="home"></span>
                 <div class="section">
-                    <div class="containerRow2">
-                        <div id="fotocontainer">
-                            <img class="fotohome" src="Me/img1.png" />
-                            <img class="fotohome" src="Me/img2.png" />
-                            <!--<img class="fotohome" src="Me/img3.png" />-->
-                            <img class="fotohome" src="Me/img4.png" />
-                            <img class="fotohome glitch" src="Me/img5.png" />
+                    <div class="containerRow">                        	<div class="texthome"><h3>Ciao,</h3> 
+						<div class="textcontainer slidein-bottom"><p>mi chiamo Stefano Ferrari, studio <b>Design della Comunicazione</b> al Politecnico di Milano.<br>Mi piace girare <b>video</b> e scattare <b>foto</b>. Sono anche un appassionato di videogiochi e informatica.<br><br>Se vuoi saperne di più su di me <b>scrolla</b> la pagina!</p>
+                        	</div>
+						</div>
+						<div class="fotocontainer slidein-right" >
+							<img class="fotohome" src="Me/EDIT/DSC_0211.jpg" />
                         </div>
-                        
-                        <div class="textcontainer"><h3>Ciao,</h3> <p>sono Stefano Ferrari, studio Design della Comunicazione al Politecnico di Milano. Mi piace girare video e scattare foto, ho una grande passione per i videogiochi, il web e l'informatica.</p><br>Se vuoi saperne di più su di me scorri la pagina!
-                        </div>
-                        
-                    </div>
+					</div>
+
                 </div>
-                <span class="anchor" id="bio"></span>
+                <span class="anchor" id="about"></span>
                 <div class="section">
-					<div id="textimg">	
-						<img class="img" src="" />
-						<p class="text">
-                    Ho 20 anni, vivo a Cremona e studio Design della Comunicazione al Politecnico di Milano.
-					Sono un appassionato di videogiochi e informatica. Ho iniziato a pensare ad un futuro nel mondo della grafica e della programmazione grazie uno stage, organizzato dal Politecnico, durante il quale ho imparato le basi del linguaggio C# e Unity 3D.
+					<div class="containerAbout">
+					<div class="textimg">	
+						<img class="img slidein-left" src="immagini/IMG_1155_insta.jpg" />
+						<p class="text slidein-right">
+							Ho 20 anni, vivo a Cremona e studio a Milano per diventare un <b>Visual Designer</b>. Non so ancora in cosa mi specializzerò di preciso, ma tra i miei sogni c'è quello di lavorare in una software house di videogiochi.<br>
+					In quinta superiore ho partecipato ad uno stage, presso il Politecnico, dove ho imparato le basi di <b>Unity 3D</b> e <b>C#</b> e programmato i miei primi giochi.<br>
+					Tra le mie altre passioni ci sono il disegno e i motori.
 					</p>
 					</div>
-					<div id="textimg">
-						<p class="text2">
-                    Per questo motivo, dopo il diploma ho frequentato un anno di Ingegneria Informatica, ma alla fine ho capito che non faceva per me e ho effettuato il passaggio a Design.<br><br>
-                    Qui ho trovato un ambiente molto più familiare, dove posso dedicarmi anche ad altri miei interessi come il disegno, la fotografia e in particolare il videomaking.
+					<div class="textimg">
+						<p class="text2 slidein-left">
+                    Da circa tre anni ho iniziato a <b>girare video</b> e successivamente, quasi di conseguenza, mi sono appassionato anche alla <b>fotografia.</b><br>
+					Mi considero ancora un principante, ma con tanta voglia di imparare e cerco di migliorare ogni volta che ho l'occasione di uscire a scattare.<br>Qui sotto puoi vedere alcune foto che ho selezionato, insieme ai miei disegni ed elaborati grafici.
+					Se vuoi restare aggiornato sui miei progressi, seguimi su <a href="https://www.instagram.com/stefano.ferrari_visualdesign/?hl=it" target="_blank" class="link">instagram!</a>
 						</p>
-						<img class="img2" src="" />
+						<img class="img2 slidein-right" src="immagini/DSC_0206-2.jpg" />
                     </div>
+						</div>
                 </div>
                 <span class="anchor" id="portfolio"></span>
                 <div class="section">
-                    <div class="slide-container">
+                    <div id="portfolio-slider" class="slide-container slidein-right">
                     <div id="slide-photo" class="slideshow slide-active">
-						<a class="slidebtn prev">&lt;</a>
-						<a class="slidebtn next">&gt;</a>
+						<a class="slidebtn prev"><img src="icone/arrow_previous_icon_256.png" class="slidebtn-imgsx" /></a>
+						<a class="slidebtn next"><img src="icone/arrow_next_icon_256.png" class="slidebtn-imgdx" /></a>
 						<div class="slideitem item1 activeitem">
-                            a
+							<div class="slide-text">Fuorisalone 2018</div>
+                            <img src="immagini/IMG_1500.jpg" class="slide-img">
 						</div>
 						<div class="slideitem item2 nextitem">
-                            a
+							<div class="slide-text">Fuorisalone 2018</div>
+                            <img src="immagini/IMG_1518.jpg" class="slide-img">
 						</div>
 						<div class="slideitem item3 hiddenitem">
-                            a
+							<div class="slide-text">Fuorisalone 2018</div>
+                            <img src="immagini/IMG_1508.jpg" class="slide-img">
 						</div>
-                        <div class="slideitem item4 previtem">
-                            a
+						<div class="slideitem item4 hiddenitem">
+							<div class="slide-text">Fuorisalone 2018</div>
+                            <img src="immagini/IMG_1567.jpg" class="slide-img">
+						</div>
+						<div class="slideitem item5 hiddenitem">
+							<div class="slide-text">Fuorisalone 2018</div>
+                            <img src="immagini/IMG_1571.jpg" class="slide-img">
+						</div>
+						<div class="slideitem item6 hiddenitem">
+							<div class="slide-text">Lago di Garda</div>
+                            <img src="immagini/IMG_1909.jpg" class="slide-img">
+						</div>
+						<div class="slideitem item7 hiddenitem">
+							<div class="slide-text">Cinque Terre</div>
+                            <img src="immagini/IMG_2138.jpg" class="slide-img">
+						</div>
+						<div class="slideitem item8 hiddenitem">
+							<div class="slide-text">Cinque Terre</div>
+                            <img src="immagini/IMG_2196.jpg" class="slide-img">
+						</div>
+						<div class="slideitem item9 hiddenitem">
+							<div class="slide-text">Cinque Terre</div>
+                            <img src="immagini/IMG_2007.jpg" class="slide-img">
+						</div>
+						<div class="slideitem item10 hiddenitem">
+							<div class="slide-text">Cinque Terre</div>
+                            <img src="immagini/IMG_2060-2.jpg" class="slide-img">
+						</div>
+                        <div class="slideitem item11 previtem">
+							<div class="slide-text">Cinque Terre</div>
+                            <img src="immagini/IMG_2045.jpg" class="slide-img">
 						</div>
 					</div>
                     
                     <div id="slide-sketch" class="slideshow slide-hidden">
-						<a class="slidebtn prev">&lt;</a>
-						<a class="slidebtn next">&gt;</a>
+						<a class="slidebtn prev"><img src="icone/arrow_previous_icon_256.png" class="slidebtn-imgsx" /></a>
+						<a class="slidebtn next"><img src="icone/arrow_next_icon_256.png" class="slidebtn-imgdx" /></a>
 						<div class="slideitem item1 activeitem">
-                            b
+                            <img src="immagini/20180613_175244.jpg" class="slide-img2">
 						</div>
 						<div class="slideitem item2 nextitem">
-                            b
+							<img src="immagini/20180613_175202.jpg" class="slide-img2">                            
 						</div>
 						<div class="slideitem item3 hiddenitem">
-                            b
+							<img src="immagini/rimchallenge.jpg" class="slide-img">
 						</div>
-                        <div class="slideitem item4 previtem">
-                            b
+						<div class="slideitem item4 hiddenitem">
+							<img src="immagini/20180613_175219.jpg" class="slide-img2">
+                             
+						</div>
+						<div class="slideitem item5 hiddenitem">
+                             <img src="immagini/20180613_175132.jpg" class="slide-img2">
+						</div>
+                        <div class="slideitem item6 previtem">
+							<img src="immagini/IMG_2235.jpg" class="slide-img">
 						</div>
 					</div>
                     
                     <div id="slide-other" class="slideshow slide-hidden">
-						<a class="slidebtn prev">&lt;</a>
-						<a class="slidebtn next">&gt;</a>
+						<a class="slidebtn prev"><img src="icone/arrow_previous_icon_256.png" class="slidebtn-imgsx" /></a>
+						<a class="slidebtn next"><img src="icone/arrow_next_icon_256.png" class="slidebtn-imgdx" /></a>
 						<div class="slideitem item1 activeitem">
-                            c
+                           	<img src="immagini/17-18_C1_Es03C_FerrariStefano.gif" class="slide-img2">
 						</div>
 						<div class="slideitem item2 nextitem">
-                            c
+                            <img src="immagini/17-18_C1_Es03C2_FerrariStefano.gif" class="slide-img2">
 						</div>
 						<div class="slideitem item3 hiddenitem">
-                            c
+                            <img src="immagini/17-18_C1_Es04_FerrariStefano_F01.jpg" class="slide-img">
 						</div>
-                        <div class="slideitem item4 previtem">
-                            c
+                        <div class="slideitem item4 hiddenitem">
+                            <img src="immagini/17-18_C1_Es04_FerrariStefano_F03.jpg" class="slide-img">
+						</div>
+						<div class="slideitem item5 hiddenitem">
+                            <img src="immagini/17-18_C1_Es04_FerrariStefano_F08.jpg" class="slide-img">
+						</div>
+						<div class="slideitem item6 hiddenitem">
+                            <img src="immagini/17-18_C1_Es04_FerrariStefano_F09.jpg" class="slide-img">
+						</div>
+						<div class="slideitem item7 hiddenitem">
+                            <img src="immagini/17-18_C1_Es04_FerrariStefano_F14.jpg" class="slide-img">
+						</div>
+						<div class="slideitem item8 hiddenitem">
+                           <img src="immagini/17-18_C1_Es04_FerrariStefano_F03.jpg" class="slide-img">
+						</div>
+						<div class="slideitem item9 previtem">
+                             <img src="immagini/IMG_0200(edit).jpg" class="slide-img">
 						</div>
 					</div>
                     </div>
@@ -120,18 +176,49 @@
                 
                 <span class="anchor" id="showcase"></span>
                 <div class="section">
-                    prova
+                    <div id="showcase-slider" class="slide-container slidein-right">
+                    <div id="slide-showcase" class="slideshow slide-active">
+						<a class="slidebtn showprev"><img src="icone/arrow_previous_icon_256.png" class="slidebtn-imgsx" /></a>
+						<a class="slidebtn shownext"><img src="icone/arrow_next_icon_256.png" class="slidebtn-imgdx" /></a>
+						<div class="slideitem show1 activeitem">
+                            <div id="spinner1"></div>
+							<div id="spinner2"></div>
+						</div>
+						<div class="slideitem show2 nextitem">
+                           
+							<div id="spinner3"></div>
+						</div>
+						<div class="slideitem show3 hiddenitem">
+                            <div id="spinner-wrapper">
+							<div id="spinner-container"><div id="spinner4"></div></div>
+						</div>
+							</div>
+                        <div class="slideitem show4 previtem">
+                            <a href="#showcase" class="glitch1">Effetto Glitch 1</a>
+							<a href="#showcase" class="glitch2">Effetto Glitch 2</a>
+						</div>
+					</div>
+					</div>
                 </div>
                 
                 <span class="anchor" id="contatti"></span>
                 <div class="section">
-                    prova
+                    <h2>Domande? Proposte di lavoro?</h2>
+					<a href="mailto: stefano.ferrari.sf97@gmail.com" class="link"><p class="mail">Mandami una Mail</p></a>
+					<br>
+					<h2>Restiamo in contatto!</h2>
+					<p class="whitetext">Seguimi su Instagram, LinkedIn e Behance per rimanere aggiornato sui miei nuovi progetti</p> 
+					<a href="https://www.instagram.com/stefano.ferrari_visualdesign/?hl=it" target="_blank"><img src="icone/instagram.png" class="icona" /></a>
+					<a href="https://www.linkedin.com/in/stefano-ferrari-316258162/" target="_blank"><img src="icone/linkedin.png" class="icona" /></a>
+					<a href="https://www.behance.net/stefanofer2223" target="_blank"><img src="icone/behance.png" class="icona" /></a>
                 </div>
                 
-            </div>         
+            </div>
+			
         </div>
         
-        <div id="footer"></div>
+        <div id="footer"> <p class="footertext">&#169;Stefano Ferrari - 2018</p></div>
+			
         </div>
     </body>
     
