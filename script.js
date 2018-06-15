@@ -97,7 +97,7 @@ function next(){
 	}else if(s==2){
 		max=6;
 	}else{
-		max=9;
+		max=12;
 	}
 	
 	if(n!=max){
@@ -162,7 +162,7 @@ function prev(){
 	}else if(s==2){
 		max=6;
 	}else{
-		max=9;
+		max=12;
 	}
 	
 	if(n!=1){
@@ -320,7 +320,7 @@ function switchSketch(){
 }
 
 function switchOther(){
-    max=9;    
+    max=12;    
 	
 	
     if(s==3){

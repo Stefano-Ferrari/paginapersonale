@@ -277,8 +277,8 @@ body{
 
 .text{
 	right: 0;
-	background-color: #eaeaea;
-    color: 2b2b27;
+	background-color: #0e6b93;
+    color: #eaeaea;
 	padding: 5vh;
 	margin-left: 5vh;
 	transition: all 0.5s;
@@ -297,8 +297,8 @@ body{
 .text2{
 	left: 0;
 	bottom: 10vh;
-	background-color: #eaeaea;
-	color: 2b2b27;
+	background-color: #0e6b93;
+	color: #eaeaea;
 	padding: 5vh;
 	margin-right: 5vh;
 	transition: all 0.5s;
