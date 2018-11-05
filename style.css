@@ -169,17 +169,14 @@ body{
     border:0;
     margin:0;
     padding: 0;
-<<<<<<< HEAD
     margin-top: 20vh;
     transform: translate(-50%, -50%);
 }
 
 .glitch{
     animation: flash 2s infinite linear;
-=======
 	transform: translate(-50%,0);
 	margin-left: 50%;
->>>>>>> 2bcdf34dbb1ca022e4e0d75087cb0ad0b637ed50
 }
 
 @keyframes flash{
